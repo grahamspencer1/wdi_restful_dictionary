@@ -1,1 +1,21 @@
-<p>This is the entries index page</p>
+<h1>Entries</h1>
+
+<% @entries.each do |entry|%>
+  <%= entry.word %><br />
+  <%= entry.definition %><br />
+  <%= entry.language %><br />
+  <hr>
+<% end %>
+
+
+<!-- The goal of our index page is to display a complete list of words in our dictionary and have each one link to the show page for that specific entry.
+
+Your task is to complete the HTML and ERB in index.html.erb and, based on what you want your ERB to look like, set up any necessary data by defining instance variables in the index controller action.
+
+Hints:
+
+An instance of an entry has word, definition, and language as attributes
+Use link_to
+Use a path helper method to generate the URL for the right show page (remember this is a dynamic URL)
+If you haven’t found yourself requiring an instance variable, look for ways to refactor your code so the controller and not the view is making ActiveRecord calls to the database
+Think about what semantic HTML markup would make sense for this page -->
