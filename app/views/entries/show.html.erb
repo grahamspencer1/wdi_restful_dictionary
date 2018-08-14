@@ -3,6 +3,8 @@
 <p><strong>Language: </strong> <%= @entry.language %> </p>
 <p><strong>Definition: </strong> <%= @entry.definition %> </p>
 
+<%= link_to "Edit", edit_entry_path %>
+|
 <%= link_to "Back", entries_url %>
 
 <!-- The goal of this page is to display a single dictionary entry.
