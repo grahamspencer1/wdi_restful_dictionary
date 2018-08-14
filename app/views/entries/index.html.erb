@@ -4,8 +4,10 @@
 <br>
 
 <% @entries.each do |entry|%>
-  <strong><%= link_to entry.word, entry_path(entry) %></strong> (<%= entry.language %>)
-  <hr>
+  <div class="entry"
+    <strong><%= link_to entry.word, entry_path(entry) %></strong> (<%= entry.language %>)
+    <hr>
+  </div>
 <% end %>
 
 
