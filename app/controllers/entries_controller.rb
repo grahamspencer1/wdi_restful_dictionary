@@ -20,8 +20,6 @@ class EntriesController < ApplicationController
 
     if @entry.save
       redirect_to entries_url
-    else
-      render :new
     end
   end
 
