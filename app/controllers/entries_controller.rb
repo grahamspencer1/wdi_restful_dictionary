@@ -17,9 +17,10 @@ class EntriesController < ApplicationController
     @entry.word = params[:entry][:word]
     @entry.definition = params[:entry][:definition]
     @entry.language = params[:entry][:language]
-
     if @entry.save
       redirect_to entries_url
+    else
+      render :new
     end
   end
 
@@ -32,11 +33,10 @@ class EntriesController < ApplicationController
     @entry.word = params[:entry][:word]
     @entry.definition = params[:entry][:definition]
     @entry.language = params[:entry][:language]
-
     if @entry.save
       redirect_to entry_url(params[:id])
     else
-      redirect_to :edit
+      render :edit
     end
   end
 

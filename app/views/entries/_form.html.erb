@@ -1,3 +1,15 @@
+<% if @entry.errors.any? %>
+<div id="error_explanation">
+  <h2>Yarr, <%= pluralize(@entry.errors.count, "error") %> be found in yer form! Try again or walk the plank, ya scurvy dog!</h2>
+
+  <ul>
+  <% @entry.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+  <% end %>
+  </ul>
+</div>
+<% end %>
+
 <%= form_for @entry do |f| %>
 
   <p>
@@ -10,7 +22,7 @@
   </p>
   <p>
     <%= f.label :definition %>
-    <%= f.text_field :definition %>
+    <%= f.text_area :definition %>
   </p>
 
 <p><%= f.submit %></p>
