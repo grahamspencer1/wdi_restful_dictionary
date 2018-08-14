@@ -1,5 +1,24 @@
-<h1>The entry form will go here later! Scram!</h1>
+<h1>Entry Form</h1>
 
+<%= form_for @entry do |f| %>
+
+  <p>
+    <%= f.label :word %>
+    <%= f.text_field :word %>
+  </p>
+  <p>
+    <%= f.label :language %>
+    <%= f.text_field :language %>
+  </p>
+  <p>
+    <%= f.label :definition %>
+    <%= f.text_field :definition %>
+  </p>
+
+<p><%= f.submit %></p>
+<% end %>
+
+<%= link_to "Back", entries_url %>
 
 <!-- This page should contain a form to allow the user to add a new entry to the dictionary.
 

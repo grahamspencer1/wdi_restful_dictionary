@@ -1,9 +1,10 @@
 <h1>Entries</h1>
 
+<p><%= link_to "New", new_entry_path %></p>
+<br>
+
 <% @entries.each do |entry|%>
-  <%= entry.word %><br />
-  <%= entry.definition %><br />
-  <%= entry.language %><br />
+  <strong><%= link_to entry.word, entry_path(entry) %></strong> (<%= entry.language %>)
   <hr>
 <% end %>
 
